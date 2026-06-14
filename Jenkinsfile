@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'node --version'
+                bat 'node --version'
             }
         }
 
@@ -24,7 +24,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'docker build -t jenkins-demo .'
+                bat 'docker build -t jenkins-demo .'
                 echo 'Deployed!'
             }
         }
